@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book NOW!</title>
+    <link rel="shortcut icon" href="Fav.png" type="image/x-icon">  
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://img.freepik.com/free-vector/flat-hand-drawn-hospital-reception-scene_52683-54613.jpg?w=996&t=st=1705156503~exp=1705157103~hmac=3cf25e19b01344d6f459009dcb2caa9dfe7224e69ac7288e985cb78c357da672')no-repeat center center/cover;
+}
+
+#name{
+    line-height: 50%;
+}
+
+a{
+    font-size: large;
+    font-weight: 500;
+    font-family: auto;
+    text-decoration: none;
+}
+
+a:link {
+    color: rgb(256,256, 256);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: white;
+    background-color: rgba(233, 233, 233, 0.287);
+    border: none;
+    border-radius: 10px;
+    padding:0.5rem;
+    text-decoration: none;
+  }
+  
+  a:active {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+header {
+    background-color: navy;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: auto;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.booking-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-group {
+    flex: 1 1 45%;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+button {
+    background-color: navy;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.background-image {
+    width: 100%;
+    height: 300px;
+    background-image: url('https://www.brookings.edu/wp-content/uploads/2017/05/hospital002.jpg');
+    background-size:750px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.confirmation-box {
+    display: none;
+    background-color:navy;
+    color: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+footer {
+            background-color: navy;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            margin-top: 20px;
+        }
+
+.booking-form, .confirmation-box {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fadeOut {
+            animation: fadeOut 1s forwards;
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        header {
+            animation: bounceIn 1s;
+        }
+
+        @keyframes bounceIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        button {
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .background-image {
+            animation: zoomIn 1s;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+
+        
+        @media only screen and (max-width: 780px) {
+            #hospitalLogo {
+                display: none;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="HSlogo2.jpg" alt="Hospital Logo" style="width: 80px; height: 80px; margin-right: 10px; position:absolute; left:25px; transform-origin: center center; transition: transform 0.5s ease-in-out;" id="hospitalLogo">
+    <h3><i><b>"He who has health, has hope; and he who has hope, has everything.”</b></i></h3>
+    <div id="name"><h1>LIFE ZONE Hospital</h1>
+    <h5><i>#49/Old Park Street, California.</i></h5></div>
+    <div>
+        <a href="index.html" target="_parent"><ion-icon name="home"></ion-icon>
+        </svg>&nbsp;&nbsp;Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="About.html" target="_parent"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
+        </svg>&nbsp;&nbsp;About Us </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="Doctors.html" target="_parent"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-prescription" viewBox="0 0 16 16">
+            <path d="M5.5 6a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 1 0V9h.293l2 2-1.147 1.146a.5.5 0 0 0 .708.708L9 11.707l1.146 1.147a.5.5 0 0 0 .708-.708L9.707 11l1.147-1.146a.5.5 0 0 0-.708-.708L9 10.293 7.695 8.987A1.5 1.5 0 0 0 7.5 6zM6 7h1.5a.5.5 0 0 1 0 1H6z"/>
+            <path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v10.5a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 3 14.5V4a1 1 0 0 1-1-1zm2 3v10.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5V4zM3 3h10V1H3z"/>
+        </svg>&nbsp;&nbsp;Our Doctors </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="R&A.html" target="_parent"><ion-icon name="paper"></ion-icon>
+        </svg>&nbsp;&nbsp;Our Research</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="Gallery.html" target="_parent"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dpad" viewBox="0 0 16 16">
+            <path d="m7.788 2.34-.799 1.278A.25.25 0 0 0 7.201 4h1.598a.25.25 0 0 0 .212-.382l-.799-1.279a.25.25 0 0 0-.424 0Zm0 11.32-.799-1.277A.25.25 0 0 1 7.201 12h1.598a.25.25 0 0 1 .212.383l-.799 1.278a.25.25 0 0 1-.424 0ZM3.617 9.01 2.34 8.213a.25.25 0 0 1 0-.424l1.278-.799A.25.25 0 0 1 4 7.201V8.8a.25.25 0 0 1-.383.212Zm10.043-.798-1.277.799A.25.25 0 0 1 12 8.799V7.2a.25.25 0 0 1 .383-.212l1.278.799a.25.25 0 0 1 0 .424Z"/>
+            <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v3a.5.5 0 0 1-.5.5h-3A1.5 1.5 0 0 0 0 6.5v3A1.5 1.5 0 0 0 1.5 11h3a.5.5 0 0 1 .5.5v3A1.5 1.5 0 0 0 6.5 16h3a1.5 1.5 0 0 0 1.5-1.5v-3a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 0 16 9.5v-3A1.5 1.5 0 0 0 14.5 5h-3a.5.5 0 0 1-.5-.5v-3A1.5 1.5 0 0 0 9.5 0zM6 1.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3A1.5 1.5 0 0 0 11.5 6h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a1.5 1.5 0 0 0-1.5 1.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-3A1.5 1.5 0 0 0 4.5 10h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 0 6 4.5z"/>
+        </svg>&nbsp;&nbsp;Our Gallery </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="Contact.html" target="_parent"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+          </svg>&nbsp;&nbsp;Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+
+</header>
+
+<main>
+    <div class="background-image"></div>
+    <form class="booking-form" id="bookingForm">
+        
+        <div class="form-group" >
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" required>
+        </div>&nbsp;&nbsp;&nbsp;
+        <div class="form-group">
+            <label for="age">Your Age:</label>
+            <input type="number" id="age" required>
+        </div>&nbsp;&nbsp;&nbsp;
+        <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" required>
+        </div>&nbsp;&nbsp;&nbsp;
+        <div class="form-group">
+            <label for="phone">Your Phone:</label>
+            <input type="tel" id="phone" required>
+        </div>&nbsp;&nbsp;&nbsp;
+        <div class="form-group">
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" min="2023-01-01" required>
+        </div>&nbsp;&nbsp;&nbsp;
+        <div class="form-group">
+            <label for="time">Select Time:</label>
+            <input type="time" id="time" required>
+        </div>&nbsp;&nbsp;&nbsp;
+        <div class="form-group">
+            <label for="doctor">Select Doctor:</label>
+            <select id="doctor" required>
+                <option value="specialist">--Search Specialist--</option>
+                <option value="dr-smith">Dr. Smith -Neurologist-  44 years of Exp.</option>
+                <option value="dr-jones">Dr. Jones  -Dermatologist-  24 years of Exp.</option>
+                <option value="dr-stevan">Dr. Stevan  -Ophthamolist-  32 years of Exp.</option>
+                <option value="dr-patrick">Dr. Patrick  -Paediatrician-  26 years of Exp.</option>
+                <option value="dr-isabelle">Dr. Isabelle  -Cardiologist-  46 years of Exp.</option>
+                <option value="dr-alex">Dr. Alex  -Paediatrician-  40 years of Exp.</option>
+                <option value="dr-dianna">Dr. Dianna  -Gastrologist-  30 years of Exp.</option>
+            </select>
+        </div>&nbsp;&nbsp;&nbsp;            
+        <button type="submit" >Book Now</button>
+    </form>
+    <div class="confirmation-box" id="confirmationBox">Thank you for registration! We will contact you shortly.</div>
+</main>
+<footer>
+    &copy; 2024 LIFE ZONE Hospital. All rights reserved.
+</footer>
+
+<script>
+
+const hospitalLogo = document.getElementById('hospitalLogo');
+    hospitalLogo.addEventListener('mouseover', function() {
+        hospitalLogo.style.transform = 'rotate(360deg)';
+    });
+
+    hospitalLogo.addEventListener('mouseout', function() {
+        hospitalLogo.style.transform = 'rotate(0deg)';
+    });
+
+
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        const name = document.getElementById('name').value;
+        const age = document.getElementById('age').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const date = document.getElementById('date').value;
+        const time = document.getElementById('time').value;
+        const doctor = document.getElementById('doctor').value;
+
+        alert(`Booking Details:\nName: ${name}\nAge: ${age}\nEmail: ${email}\nPhone: ${phone}\nDate: ${date}\nTime: ${time}\nDoctor: ${doctor}`);
+
+        const confirmationBox = document.getElementById('confirmationBox');
+        confirmationBox.style.display = 'block';
+        confirmationBox.classList.remove('fadeOut');
+
+        setTimeout(() => {
+            document.getElementById('bookingForm').reset();
+            confirmationBox.classList.add('fadeOut');
+        }, 3000); 
+    });
+    
+</script>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+</body>
+</html>

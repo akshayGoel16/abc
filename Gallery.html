@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - LIFE ZONE Hospital</title>
+    <link rel="shortcut icon" href="Fav.png" type="image/x-icon">
+    <style>
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between/center;
+            align-items:center;
+            padding: 10px;
+        }
+        .departments {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            padding-right: 20px;
+            transform: translateX(-100%);
+            transition: transform 0.5s ease-in-out;
+        }
+        .facilities {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            padding-right: 20px;
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in-out;
+        }
+        .facilities {
+            width: 30%;
+        }
+        .department, .facility {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .department img, .facility img {
+            width: 200px;
+            height: auto;
+            border:none;
+            border-radius: 25%;
+        }
+        h2 {
+        color: navy;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        }
+
+        body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url("https://as2.ftcdn.net/v2/jpg/07/02/27/75/1000_F_702277539_WV1FeyujKHIuwkeGjIi3clVubNlsLD7R.jpg")
+          no-repeat center center/cover;
+      }
+
+      #name {
+        line-height: 50%;
+      }
+
+      a {
+        font-size: large;
+        font-weight: 500;
+        font-family: auto;
+        text-decoration: none;
+      }
+
+      a:link {
+        color: rgb(256, 256, 256);
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: white;
+        background-color: rgba(233, 233, 233, 0.287);
+        border: none;
+        border-radius: 10px;
+        padding: 0.5rem;
+        text-decoration: none;
+      }
+
+      a:active {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      header {
+        background-color: navy;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-family: auto;
+      }
+
+      header {
+        animation: bounceIn 1s;
+      }
+
+      @keyframes bounceIn {
+        from {
+          transform: translateY(-50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      main {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      .fadeIn {
+        opacity: 0;
+        animation: fadeIn 1.5s forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .facility img {
+        width: 180px;
+        height: auto;
+        border-radius: 25%;
+        margin-right: 20px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+     .facility:hover img {
+        transform: scale(1.2);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      }
+
+      .department img {
+        width: 180px;
+        height: auto;
+        border-radius: 25%;
+        margin-right: 20px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+     .department:hover img {
+        transform: scale(1.2);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease-in-out;
+
+      }
+
+      footer {
+            background-color: navy;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+
+        @media only screen and (max-width: 750px) {
+            #hospitalLogo {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 545px) {
+            .container {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="HSlogo2.jpg" alt="Hospital Logo" style="width: 80px; height: 80px; margin-right: 10px; position:absolute; left:25px; transform-origin: center center; transition: transform 0.5s ease-in-out;" id="hospitalLogo">
+        <h3><i><b>"He who has health, has hope; and he who has hope, has everything.”</b></i></h3>
+        <div id="name"><h1>LIFE ZONE Hospital</h1>
+        <h5><i>#49/Old Park Street, California.</i></h5></div>
+        <div>
+            <nav>
+                <a href="index.html" target="_parent"><ion-icon name="home"></ion-icon>
+                </svg>&nbsp;&nbsp;Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="Book.html" target="_parent"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-plus" viewBox="0 0 16 16">
+                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                    <path d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4"/>
+                  </svg>&nbsp;&nbsp;Book Now</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="Doctors.html" target="_parent"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-prescription" viewBox="0 0 16 16">
+                      <path d="M5.5 6a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 1 0V9h.293l2 2-1.147 1.146a.5.5 0 0 0 .708.708L9 11.707l1.146 1.147a.5.5 0 0 0 .708-.708L9.707 11l1.147-1.146a.5.5 0 0 0-.708-.708L9 10.293 7.695 8.987A1.5 1.5 0 0 0 7.5 6zM6 7h1.5a.5.5 0 0 1 0 1H6z"/>
+                      <path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v10.5a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 3 14.5V4a1 1 0 0 1-1-1zm2 3v10.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5V4zM3 3h10V1H3z"/>
+                    </svg>&nbsp;&nbsp;Our Doctors </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="R&A.html" target="_parent"><ion-icon name="paper"></ion-icon>
+                    </svg>&nbsp;&nbsp;Our Research</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="About.html" target="_parent"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
+                      </svg>&nbsp;&nbsp;About Us </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <a href="Contact.html" target="_parent"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                      </svg>&nbsp;&nbsp;Contact Us</a>
+            </nav>
+    </header> 
+
+    <main>
+        <div class="container">
+            <div class="departments">
+                <h2>Departments:</h2>
+                <div class="department">
+                    <h3>DERMATOLOGY AND COSMETOLOGY</h3>
+                    <img src="https://img.freepik.com/free-photo/girl-receiving-facial-treatment-beauty-salon_23-2148194169.jpg?w=996&t=st=1707830216~exp=1707830816~hmac=146a407d982670d44f7f30080e060a87f61bc6a02bfe0dd53fe5dafb001cd810" alt="Dermatology and Cosmetology">
+                </div>
+                <div class="department">
+                    <h3>CARDIOLOGY</h3>
+                    <img src="https://img.freepik.com/free-photo/elderly-female-smiling-with-doctor-visiting-senior-patient-woman-hospital-ward_1150-21710.jpg?w=996&t=st=1707830257~exp=1707830857~hmac=20f5d767fc86c714a0189d2e444e7778d9904c934a06b638be2dbcc147361d58" alt="Cardiology">
+                </div>
+                <div class="department">
+                    <h3>NEUROLOGY</h3>
+                    <img src="https://img.freepik.com/free-photo/doctor-arranging-scanning-device-head-female-patient_482257-31612.jpg?w=996&t=st=1707830289~exp=1707830889~hmac=dd65775e8a62255546a8484c9a793ef125d1a93f4c25e40588390d1e3f947ee1" alt="Neurology">
+                </div>
+            </div>
+            <div class="facilities">
+                <h2>Facilities:</h2>
+                <div class="facility">
+                    <h3>EMERGENCY CARE</h3>
+                    <img src="https://img.freepik.com/free-photo/side-view-paramedic-checking-victim_23-2149478560.jpg?w=996&t=st=1707830326~exp=1707830926~hmac=6a747df5201dae6c3eb34838b3c8d1b5c3492e386b0abb81f08bdfc7be3ff400" alt="Emergency Care">
+                </div>
+                <div class="facility">
+                    <h3>CCU & ICU</h3>
+                    <img src="https://img.freepik.com/free-photo/clean-empty-hospital-ward-ready-receive-patients-reflecting-modern-medical-care_91128-4608.jpg?w=1060&t=st=1707830398~exp=1707830998~hmac=c6b53daa14fd822cc2177de3e0bfbeb5263eddac68d1e13c92a17f7602bdc0a7" alt="CCU & ICU">
+                </div>
+                <div class="facility">
+                    <h3>GENERAL SURGERY</h3>
+                    <img src="https://img.freepik.com/free-photo/surgeons-performing-operation-operation-theater_107420-64881.jpg?w=996&t=st=1707830446~exp=1707831046~hmac=0bf47ec275d2b0aa5871ecbab4b5d4c384901353131e15fc09e3919db3789953" alt="General Surgery">
+                </div>
+            </div>
+        </div>
+</main>
+
+<footer>&copy; 2024 LIFE ZONE Hospital. All rights reserved.</footer>
+
+<script>
+    window.onload = function () {
+        const departments = document.querySelector('.departments');
+        departments.style.transform = 'translateX(0)';
+        const facilities = document.querySelector('.facilities');
+        facilities.style.transform = 'translateX(0)';
+    };
+
+const hospitalLogo = document.getElementById('hospitalLogo');
+  hospitalLogo.addEventListener('mouseover', function() {
+      hospitalLogo.style.transform = 'rotate(360deg)';
+  });
+
+  hospitalLogo.addEventListener('mouseout', function() {
+      hospitalLogo.style.transform = 'rotate(0deg)';
+  });
+</script>
+
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+</body>
+</html>

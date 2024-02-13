@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctors @Life_Zone</title>
+    <link rel="shortcut icon" href="Fav.png" type="image/x-icon" />
+
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url("https://as2.ftcdn.net/v2/jpg/07/02/27/75/1000_F_702277539_WV1FeyujKHIuwkeGjIi3clVubNlsLD7R.jpg")
+          no-repeat center center/cover;
+      }
+
+      #name {
+        line-height: 50%;
+      }
+
+      a {
+        font-size: large;
+        font-weight: 500;
+        font-family: auto;
+        text-decoration: none;
+      }
+
+      a:link {
+        color: rgb(256, 256, 256);
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: white;
+        background-color: rgba(233, 233, 233, 0.287);
+        border: none;
+        border-radius: 10px;
+        padding: 0.5rem;
+        text-decoration: none;
+      }
+
+      a:active {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      header {
+        background-color: navy;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-family: auto;
+      }
+
+      header {
+        animation: bounceIn 1s;
+      }
+
+      @keyframes bounceIn {
+        from {
+          transform: translateY(-50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      main {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      .fadeIn {
+        opacity: 0;
+        animation: fadeIn 1.5s forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      .team-member {
+        display: flex;
+  margin-bottom: 50px; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+      }
+
+      .team-member img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-right: 20px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .team-member:hover img {
+        transform: scale(1.2);
+      }
+
+      .info {
+        text-align: center;
+        position: relative; 
+        margin-top: 20px; 
+      }
+
+      h2 {
+        color: navy;
+        border-bottom: 2px solid navy;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+
+      h4 {
+        font-weight: bolder;
+      }
+      .info p {
+        font-style: oblique;
+      }
+
+    .specs{
+        position: absolute;
+        left: 0;
+        top: 95%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 10px;
+        border-radius: 5px;
+        transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        opacity: 0;
+
+    }
+
+    .info h4 {
+        margin-bottom: 5px;
+  position: relative;
+  z-index: 1;}
+
+    .team-member:hover .specs {  
+        left: 50%; 
+  opacity: 1; 
+}
+
+      footer {
+        background-color: navy;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        margin-top: 20px;
+      }
+      
+      @media only screen and (max-width: 750px) {
+            #hospitalLogo {
+                display: none;
+            }
+        }
+        
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="HSlogo2.jpg" alt="Hospital Logo" style="width: 80px; height: 80px; margin-right: 10px; position: absolute; left: 25px; transform-origin: center center; transition: transform 0.5s ease-in-out;" id="hospitalLogo"/>
+      <h3>
+        <i><b>"He who has health, has hope; and he who has hope, has everything.”</b></i>
+      </h3>
+      <div id="name">
+        <h1>LIFE ZONE Hospital</h1>
+        <h5><i>#49/Old Park Street, California.</i></h5>
+      </div>
+      <div>
+        <a href="index.html" target="_parent"><ion-icon name="home"></ion-icon>
+        </svg>&nbsp;&nbsp;Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="About.html" target="_parent"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
+              </svg>&nbsp;&nbsp;About Us </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="R&A.html" target="_parent"><ion-icon name="paper"></ion-icon>
+              </svg>&nbsp;&nbsp;Our Research</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="Book.html" target="_parent"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-plus" viewBox="0 0 16 16">
+                <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                <path d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4"/></svg>&nbsp;&nbsp;Book Now</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="Gallery.html" target="_parent"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dpad" viewBox="0 0 16 16">
+                <path d="m7.788 2.34-.799 1.278A.25.25 0 0 0 7.201 4h1.598a.25.25 0 0 0 .212-.382l-.799-1.279a.25.25 0 0 0-.424 0Zm0 11.32-.799-1.277A.25.25 0 0 1 7.201 12h1.598a.25.25 0 0 1 .212.383l-.799 1.278a.25.25 0 0 1-.424 0ZM3.617 9.01 2.34 8.213a.25.25 0 0 1 0-.424l1.278-.799A.25.25 0 0 1 4 7.201V8.8a.25.25 0 0 1-.383.212Zm10.043-.798-1.277.799A.25.25 0 0 1 12 8.799V7.2a.25.25 0 0 1 .383-.212l1.278.799a.25.25 0 0 1 0 .424Z"/>
+                <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v3a.5.5 0 0 1-.5.5h-3A1.5 1.5 0 0 0 0 6.5v3A1.5 1.5 0 0 0 1.5 11h3a.5.5 0 0 1 .5.5v3A1.5 1.5 0 0 0 6.5 16h3a1.5 1.5 0 0 0 1.5-1.5v-3a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 0 16 9.5v-3A1.5 1.5 0 0 0 14.5 5h-3a.5.5 0 0 1-.5-.5v-3A1.5 1.5 0 0 0 9.5 0zM6 1.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3A1.5 1.5 0 0 0 11.5 6h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a1.5 1.5 0 0 0-1.5 1.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-3A1.5 1.5 0 0 0 4.5 10h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 0 6 4.5z"/>
+              </svg>&nbsp;&nbsp;Our Gallery </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="Contact.html" target="_parent"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                </svg>&nbsp;&nbsp;Contact Us</a>
+      </div>
+    </header>
+
+    <main class="fadeIn">
+      <h2>Our Doctors:</h2>
+      <table>
+        <tr>
+          <td>
+            <div class="team-member">
+              <img src="https://th.bing.com/th/id/OIP.dQnLQ36YDoRGmzfVn5k25AAAAA?rs=1&pid=ImgDetMain"
+                alt="Dr. Jack Smith"
+              />
+              <div class="info">
+                <h4>Dr. Jack Smith</h4>
+                <p class="specs">Specialization: Neurologist</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="team-member">
+              <img src="https://cdn.sheffield.ac.uk/sites/default/files/styles/profile_modal/public/2020-12/Emma%20Jones%20photo.jpg?itok=E0NNvM82"
+                alt="Dr. Emma Wills"
+              />
+              <div class="info">
+                <h4>Dr. Emma Wills</h4>
+                <p class="specs">Specialization: Dermatologist</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="team-member">
+              <img src="https://s3.amazonaws.com/static.gracechurch.org/images/leaders/white-james.jpg"
+                alt="Dr. James White"
+              />
+              <div class="info">
+                <h4>Dr. James White</h4>
+                <p class="specs">Specialization: Cardiologist</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="team-member">
+              <img src="https://www.socialwork.pitt.edu/sites/default/files/styles/person_large/public/person-images/ajohnson_web-680x600-0_0-680_600.png?itok=0832aGp6"
+                alt="Dr. Alisha Johnson"
+              />
+              <div class="info">
+                <h4>Dr. Alisha Johnson</h4>
+                <p class="specs">Specialization: Pediatrician</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="team-member">
+              <img src="https://www.sacredheartradio.com/wp-content/uploads/2023/01/Dr-Michael-Brown.jpg"
+                alt="Dr. Michael Brown"
+              />
+              <div class="info">
+                <h4>Dr. Michael Brown</h4>
+                <p class="specs">Specialization: Orthopedic</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="team-member">
+              <img src="https://whatsupusana.com/wp-content/uploads/2018/02/Dr.-Lee-Coat-Head-Shot-1.jpg"
+                alt="Dr. Jennifer Lee"
+              />
+              <div class="info">
+                <h4>Dr. Jennifer Lee</h4>
+                <p class="specs">Specialization: Ophthalmologist</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="team-member">
+              <img src="https://www.usfca.edu/sites/default/files/styles/1_1_360x360/public/migrated/images/headshots/martinez_david_0.jpg.jpeg?itok=xql_1v6k"
+                alt="Dr. David Martinez"
+              />
+              <div class="info">
+                <h4>Dr. David Martinez</h4>
+                <p class="specs">Specialization: Gynecologist</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="team-member">
+              <img src="https://createwellnesslajolla.com/wp-content/uploads/2024/01/Dr.-Amanda-Rodriguez-1024x987.jpeg"
+                alt="Dr. Amanda Rodriguez"
+              />
+              <div class="info">
+                <h4>Dr. Amanda Rodriguez</h4>
+                <p class="specs">Specialization: Psychiatrist</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="team-member">
+              <img src="https://www.longstreetclinic.com/wp-content/uploads/2018/04/Dr.-Mark-Wilson-2-732x1024.jpg"
+                alt="Dr. Mark Wilson"
+              />
+              <div class="info">
+                <h4>Dr. Mark Wilson</h4>
+                <p class="specs">Specialization: Urologist</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </main>
+
+    <footer>&copy; 2024 LIFE ZONE Hospital. All rights reserved.</footer>
+
+    
+  <script>
+const hospitalLogo = document.getElementById('hospitalLogo');
+    hospitalLogo.addEventListener('mouseover', function() {
+        hospitalLogo.style.transform = 'rotate(360deg)';
+    });
+
+    hospitalLogo.addEventListener('mouseout', function() {
+        hospitalLogo.style.transform = 'rotate(0deg)';
+    });
+  </script>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+  </body>
+  </html>
